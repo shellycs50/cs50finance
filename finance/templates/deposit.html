@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Shares
+{% endblock %}
+
+{% block main %}
+    <form action="/deposit" method="post">
+        <div class="mb-3">
+            <label for="amount">Amount:</label> <br></br>
+           <input class="form-control mx-auto w-auto" id="amount" name="amount" placeholder="Amount" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy Shares</button>
+    </form>
+{% endblock %}

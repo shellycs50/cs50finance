@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Get Quotes
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <table class="table table-borered table-dark" id="quotetable">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Display  -->
+
+            <tr>
+            <td>{{ content["name"] }} </td> <td>{{ content["price"] | usd }}</td> <td>{{ content["symbol"] }}</td>
+
+        </tr>
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

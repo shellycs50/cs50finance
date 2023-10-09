@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<div class="row">
+
+<div class="col-1 m-5" id="totals">
+  <p> Logged in as: {{ name }}<br>Account Balance: {{ balance | usd }}<br>Portfolio Value: {{ total_portfolio | usd }}</p>
+</div>
+
+<div class="col m-5">
+    <table class="table table-borered table-dark" id="main-table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Volume</th>
+                <th scope="col">Value</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Display  -->
+            {% for key in data %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ data[key]['volume'] }}</td>
+                <td>{{ data[key]['price'] | usd }}</td>
+                <td>{{ data[key]['total'] | usd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+{% endblock %}

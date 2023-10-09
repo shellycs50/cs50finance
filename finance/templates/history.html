@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+<div class="row">
+
+<div class="col-1 m-5" id="totals">
+    
+  <p> Account History </p>
+</div>
+
+<div class="col m-5">
+    <table class="table table-borered table-dark" id="main-table">
+        <thead>
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Name</th>
+                <th scope="col">Volume</th>
+                <th scope="col">Value</th>
+                <th scope="col">Total</th>
+                <th scope="col">DateTime</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Display  -->
+            {% for row in testing %}
+            <tr>
+                <td>{{ row['type'] }}</td>
+                <td>{{ row['stock'] }}</td>
+                <td>{{ row['volume'] }}</td>
+                <td>{{ row['price'] | usd }}</td>
+                <td>{{ row['total'] | usd }}</td>
+                <td>{{ row['date'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+{% endblock %}
