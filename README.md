@@ -1,8 +1,8 @@
-# cs50finance
+# CS50finance
 WIP Week 9 Problem Set
 ---------------------
 
-This is a relatively unstyled, but fully functional, cs50 finance problem set solution. 
+This is a relatively unstyled, but fully functional, CS50 finance problem set solution. 
 
 ************
 
